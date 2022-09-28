@@ -1,0 +1,35 @@
+{
+  "ignorePatterns": ["node_modules", ".next", "dist"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "next",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc" },
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "printWidth": 120,
+        "trailingComma": "all"
+      }
+    ]
+  }
+}
